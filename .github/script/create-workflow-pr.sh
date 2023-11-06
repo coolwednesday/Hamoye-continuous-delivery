@@ -17,8 +17,10 @@ then
     git pull origin main
 fi
 
+
 echo "Create pull request for $PR_BRANCH into main"
 gh pr create --base main --head $PR_BRANCH --title "$PR_TITLE" --body ""
+
 
 
 
