@@ -2,10 +2,6 @@
 # Make sure this file is executable
 # chmod a+x .github/script/create-workflow-pr.sh
 
-# Debugging: Print the values of the input variables
-echo "PR_BRANCH: $PR_BRANCH"
-echo "PR_TITLE: $PR_TITLE"
-
 git config user.name github-actions
 git config user.email github-actions@github.com
 
@@ -19,14 +15,5 @@ then
     git push origin $PR_BRANCH
 fi
 
-# Debugging: Print the git status to see the branch information
-git status
-
-# Debugging: Print the 'gh' version to ensure it's installed
-gh --version
-
 echo "Create pull request for $PR_BRANCH into main"
 gh pr create --base main --head $PR_BRANCH --title "$PR_TITLE" --body ""
-
-
-
