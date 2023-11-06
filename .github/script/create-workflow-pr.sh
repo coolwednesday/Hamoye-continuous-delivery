@@ -17,7 +17,5 @@ then
     git pull origin main
 fi
 
-# Create an empty commit
-git commit --allow-empty -m "$COMMIT_MESSAGE"
-git push origin $PR_BRANCH
+
 
