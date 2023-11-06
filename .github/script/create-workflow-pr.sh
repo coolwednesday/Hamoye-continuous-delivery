@@ -21,5 +21,3 @@ fi
 git commit --allow-empty -m "$COMMIT_MESSAGE"
 git push origin $PR_BRANCH
 
-echo "Create pull request for $PR_BRANCH into main"
-gh pr create --base main --head $PR_BRANCH --title "$PR_TITLE" --body ""
